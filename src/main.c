@@ -24,7 +24,7 @@ main(void)
 		return 1;
 	}
 
-	kmp_state_t *s = kmp_init(text, text_len, pat, pat_len);
+	kmp_state_t *s = kmp_start(text, text_len, pat, pat_len);
 	if (!s) {
 		fprintf(stderr,"[ERR] Allocation error!\n");
 		return 1;

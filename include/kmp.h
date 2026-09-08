@@ -11,8 +11,8 @@ typedef struct kmp_state {
 	size_t pat_len; // length of the pattern
 } kmp_state_t;
 
-kmp_state_t *kmp_init(const char *text, size_t tlen,
-                      const char *pat, size_t plen);
+kmp_state_t *kmp_start(const char *text, size_t tlen,
+                       const char *pat, size_t plen);
 void kmp_end(kmp_state_t *state);
 
 ssize_t kmp_next(kmp_state_t *state);

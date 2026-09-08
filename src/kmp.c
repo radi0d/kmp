@@ -10,7 +10,7 @@
 static size_t *z_function(const char *str, size_t len);
 
 kmp_state_t *
-kmp_init(const char *text, size_t tlen, const char *pat, size_t plen)
+kmp_start(const char *text, size_t tlen, const char *pat, size_t plen)
 {
 	assert(text);
 	assert(tlen > 0);
