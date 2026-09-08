@@ -57,6 +57,9 @@ kmp_next(kmp_state_t *state)
 {
 	assert(state);
 	assert(state->buf);
+	assert(state->buf_len > 0);
+	assert(state->cur < state->buf_len);
+	assert(state->pat_len > 0);
 
 	ssize_t res = -1;
 	for (size_t i = state->cur + 1; i < state->buf_len; i++)
